@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/Rui/IdeaProjects/Programação II/FichaPratica1/src</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">Professor</node>
+    <node x="88.15545454545457" y="229.54">Aula</node>
+    <node x="269.75" y="0.0">Main</node>
+    <node x="16.0" y="391.0">Aluno</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Aluno" target="Aula" relationship="DEPENDENCY">
+      <point x="-43.0" y="-83.0" />
+      <point x="59.0" y="370.0" />
+      <point x="97.0" y="370.0" />
+      <point x="97.0" y="360.0" />
+      <point x="135.15545454545457" y="360.0" />
+      <point x="-47.0" y="60.5" />
+    </edge>
+    <edge source="Aula" target="Aluno" relationship="DEPENDENCY">
+      <point x="-47.0" y="60.5" />
+      <point x="135.15545454545457" y="360.0" />
+      <point x="97.0" y="360.0" />
+      <point x="97.0" y="370.0" />
+      <point x="59.0" y="370.0" />
+      <point x="-43.0" y="-83.0" />
+    </edge>
+    <edge source="Professor" target="Aula" relationship="TO_MANY">
+      <point x="51.0" y="83.0" />
+      <point x="153.0" y="187.0" />
+      <point x="229.15545454545457" y="187.0" />
+      <point x="47.0" y="-60.5" />
+    </edge>
+    <edge source="Aula" target="Aluno" relationship="TO_MANY">
+      <point x="47.0" y="60.5" />
+      <point x="229.15545454545457" y="360.0" />
+      <point x="145.0" y="360.0" />
+      <point x="43.0" y="-83.0" />
+    </edge>
+    <edge source="Aluno" target="Aula" relationship="TO_MANY">
+      <point x="43.0" y="-83.0" />
+      <point x="145.0" y="360.0" />
+      <point x="229.15545454545457" y="360.0" />
+      <point x="47.0" y="60.5" />
+    </edge>
+    <edge source="Aluno" target="Professor" relationship="DEPENDENCY">
+      <point x="-43.0" y="-83.0" />
+      <point x="59.0" y="370.0" />
+      <point x="97.0" y="370.0" />
+      <point x="97.0" y="360.0" />
+      <point x="26.25" y="360.0" />
+      <point x="26.25" y="197.0" />
+      <point x="97.0" y="197.0" />
+      <point x="97.0" y="187.0" />
+      <point x="51.0" y="187.0" />
+      <point x="-51.0" y="83.0" />
+    </edge>
+    <edge source="Professor" target="Aula" relationship="DEPENDENCY">
+      <point x="-51.0" y="83.0" />
+      <point x="51.0" y="187.0" />
+      <point x="97.0" y="187.0" />
+      <point x="97.0" y="197.0" />
+      <point x="135.15545454545457" y="197.0" />
+      <point x="-47.0" y="-60.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.9532062391681109" showDependencies="true" x="209.5" y="278.5" />
+  <SelectedNodes>
+    <node>Aula</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
