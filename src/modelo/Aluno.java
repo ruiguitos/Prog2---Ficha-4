@@ -2,17 +2,19 @@ package modelo;
 
 import java.util.LinkedList;
 
-public class Aluno {
+public class Aluno extends Identificador {
 
     //atributos
-    private final String nome;
-    private final LinkedList<Aula> aulas;
-    private long numero;
+//    private String nome;
+//    private long numero;
+    private LinkedList<Aula> aulas;
+
 
     //construtores
     public Aluno(String nome, long numero) {
-        this.nome = nome;
-        this.numero = numero;
+//        this.nome = nome;
+//        this.numero = numero;
+        super(nome,numero);
         this.aulas = new LinkedList<>();
     }
 
@@ -41,17 +43,17 @@ public class Aluno {
 
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public long getNumero() {
-        return numero;
-    }
-
-    public void setNumero(long numero) {
-        this.numero = numero;
-    }
+//    public String getNome() {
+//        return nome;
+//    }
+//
+//    public long getNumero() {
+//        return numero;
+//    }
+//
+//    public void setNumero(long numero) {
+//        this.numero = numero;
+//    }
 
     public void preencherSumario(Aula aula) {
         if (!aulas.contains(aula)) {

@@ -2,19 +2,19 @@ package modelo;
 
 import java.util.LinkedList;
 
-public class Professor {
+public class Professor extends Identificador{
     //_____________ Atributos _____________
-    private String nome;
-    private long numero;
+    //private String nome;
+    //private long numero;
     private LinkedList<Aula> aulas;
     private Horario horario;
 
     //_____________ Construtores _____________
     public Professor(String nome, long numero) {
-        this.nome = nome;
-        this.numero = numero;
+//        this.nome = nome;
+//        this.numero = numero;
+        super(nome, numero);
         this.aulas = new LinkedList<>();
-
     }
 
     //_____________ Metodos _____________
@@ -63,17 +63,17 @@ public class Professor {
         }
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public long getNumero() {
-        return numero;
-    }
-
-    public void setNumero(long numero) {
-        this.numero = numero;
-    }
+//    public String getNome() {
+//        return nome;
+//    }
+//
+//    public long getNumero() {
+//        return numero;
+//    }
+//
+//    public void setNumero(long numero) {
+//        this.numero = numero;
+//    }
 
     public LinkedList<Aula> getAulas() {
         return new LinkedList<>(aulas);

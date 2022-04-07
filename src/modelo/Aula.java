@@ -2,20 +2,18 @@ package modelo;
 
 import java.util.LinkedList;
 
-public class Aula {
+public class Aula extends Identificador{
+    //private String nome;
+    // private long numero;
     private Horario horario;
-    private String nome;
     private LinkedList<Aluno> alunos;
     private StringBuilder sumario;
-    private long numero;
     private Professor professor;
-
 
 
     //_____________ Construtores _____________
     public Aula(String nome, long numero, Horario horario) {
         this(nome, numero,horario, null, new LinkedList<>());
-
         /*
         this.nome = nome;
         this.numero = numero;
@@ -27,8 +25,9 @@ public class Aula {
     }
 
     public Aula(String nome, long numero, Horario horario, Professor professor, LinkedList<Aluno> alunos) {
-        this.nome = nome;
-        this.numero = numero;
+//        this.nome = nome;
+//        this.numero = numero;
+        super(nome, numero);
         this.horario = horario;
         this.sumario = new StringBuilder();
         //this.professor = professor;
@@ -75,17 +74,17 @@ public class Aula {
         aluno.remover(this);
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public long getNumero() {
-        return numero;
-    }
-
-    public void setNumero(long numero) {
-        this.numero = numero;
-    }
+//    public String getNome() {
+//        return nome;
+//    }
+//
+//    public long getNumero() {
+//        return numero;
+//    }
+//
+//    public void setNumero(long numero) {
+//        this.numero = numero;
+//    }
 
     public String getSumario() {
 //        return sumario;
