@@ -2,7 +2,7 @@ package modelo;
 
 import java.util.LinkedList;
 
-public class Aluno extends Identificador {
+public class Aluno extends Pessoa  {
 
     //atributos
 //    private String nome;
@@ -19,29 +19,29 @@ public class Aluno extends Identificador {
     }
 
     //métodos
-    public void adicionar(Aula aula) {
-        if (aula == null || this.aulas.contains(aula)) {
-            return;
-        }
+//    public void adicionar(Aula aula) {
+//        if (aula == null || this.aulas.contains(aula)) {
+//            return;
+//        }
+//
+//        //adicionar aula à lista
+//        this.aulas.add(aula);
+//        //aula adicionar este aluno
 
-        //adicionar aula à lista
-        this.aulas.add(aula);
-        //aula adicionar este aluno
-        aula.adicionar(this);
+//    }
 
-    }
 
-    public void remover(Aula aula) {
-        if (!this.aulas.contains(aula)) {
-            return;
-        }
-
-        //remover aula à lista
-        aulas.remove(aula);
-        //aula remover este aluno
-        aula.remover(this);
-
-    }
+//    public void remover(Aula aula) {
+//        if (!this.aulas.contains(aula)) {
+//            return;
+//        }
+//
+//        //remover aula à lista
+//        aulas.remove(aula);
+//        //aula remover este aluno
+//        aula.remover(this);
+//
+//    }
 
 //    public String getNome() {
 //        return nome;
@@ -71,4 +71,18 @@ public class Aluno extends Identificador {
     public LinkedList<Aula> getAulas(Horario horario) {
         return new LinkedList<>(aulas);
     }
+
+    @Override
+    public void adicionar(Aula aula) {
+        super.adicionar(aula);
+        aula.adicionar(this);
+    }
+
+    @Override
+    public void remover(Aula aula) {
+        super.remover(aula);
+        aula.remover(this);
+    }
 }
+
+

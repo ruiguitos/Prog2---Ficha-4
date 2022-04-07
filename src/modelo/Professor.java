@@ -2,7 +2,7 @@ package modelo;
 
 import java.util.LinkedList;
 
-public class Professor extends Identificador{
+public class Professor extends Pessoa{
     //_____________ Atributos _____________
     //private String nome;
     //private long numero;
