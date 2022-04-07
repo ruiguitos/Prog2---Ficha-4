@@ -18,18 +18,6 @@ public class Professor extends Pessoa{
     }
 
     //_____________ Metodos _____________
-//    public void adicionar(Aula aula) {
-//        if (aula == null || this.aulas.contains(aula)) {
-//            return;
-//        }
-//
-//        //Adicionar a aula à lista de aulas
-//        this.aulas.add(aula);
-//
-//        //Atribuir o professor à aula
-//        aula.setProfessor(this);
-//    }
-
     @Override
     public void associar(Aula aula) {
         aula.setProfessor(this);

@@ -17,6 +17,7 @@ public class Main {
 
         professor1.adicionar(aula1);
         aluno1.adicionar(aula1);
+
     }
 
     public static void main(String[] args) {
