@@ -2,7 +2,7 @@ package modelo;
 
 import java.util.LinkedList;
 
-public class Pessoa extends Identificador {
+public abstract class Pessoa extends Identificador {
 
     protected LinkedList<Aula> aulas;
 
@@ -23,7 +23,10 @@ public class Pessoa extends Identificador {
 
         //adicionar aula à lista
         this.aulas.add(aula);
+        associar(aula);
     }
+
+    public abstract void associar(Aula aula);
 
     public void remover(Aula aula) {
         if (!this.aulas.contains(aula)) {
