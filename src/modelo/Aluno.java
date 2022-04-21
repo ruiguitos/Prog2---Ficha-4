@@ -20,6 +20,9 @@ public class Aluno extends Pessoa  {
             return;
         }
 
+        //escrever o seu sumario
+
+
         //assinar o sumario
         aula.adicionarLinhaSumario(nome);
     }
@@ -32,6 +35,13 @@ public class Aluno extends Pessoa  {
     @Override
     public void desassociar(Aula aula) {
         aula.remover(this);
+    }
+
+    @Override
+    protected void escreverSumario(Aula aula) {
+        //assinar o sumario
+//        aula.adicionarLinhaSumario(nome);
+        assinarSumario(aula);
     }
 
     @Override
