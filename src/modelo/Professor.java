@@ -2,11 +2,11 @@ package modelo;
 
 import java.util.LinkedList;
 
-public class Professor extends Pessoa{
+public class Professor extends Pessoa {
     //_____________ Atributos _____________
     //private String nome;
     //private long numero;
-    private LinkedList<Aula> aulas;
+    private final LinkedList<Aula> aulas;
     private Horario horario;
 
     //_____________ Construtores _____________
@@ -21,6 +21,11 @@ public class Professor extends Pessoa{
     @Override
     public void associar(Aula aula) {
         aula.setProfessor(this);
+    }
+
+    @Override
+    public void desassociar(Aula aula) {
+        aula.desassociarProfessor();
     }
 
     public void remover(Aula aula) {
@@ -56,34 +61,22 @@ public class Professor extends Pessoa{
         }
     }
 
-//    public String getNome() {
-//        return nome;
-//    }
-//
-//    public long getNumero() {
-//        return numero;
-//    }
-//
-//    public void setNumero(long numero) {
-//        this.numero = numero;
-//    }
-
     public LinkedList<Aula> getAulas() {
         return new LinkedList<>(aulas);
     }
 
     public LinkedList<Aula> getAulas(Horario horario) {
         //criar uma nova lista auxiliar
-        LinkedList<Aula>listaAux = new LinkedList<>();
+        LinkedList<Aula> listaAux = new LinkedList<>();
         //percorrer todas as aulas
-        for(Aula aula: this.aulas) {
+        for (Aula aula : this.aulas) {
             //para cada aula
             aula.getHorario();
             //comparar os horarios
-            if(horario.isSobre(horario) == false) {
+            if (horario.isSobre(horario) == false) {
                 //se horarios sobrepostos
             }
-                //adicionar à nova lista
+            //adicionar à nova lista
             listaAux.add(aula);
         }
         //devolver uma lista auxiliar de aulas

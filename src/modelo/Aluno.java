@@ -30,6 +30,11 @@ public class Aluno extends Pessoa  {
     }
 
     @Override
+    public void desassociar(Aula aula) {
+        aula.remover(this);
+    }
+
+    @Override
     public void remover(Aula aula) {
         super.remover(aula);
         aula.remover(this);
