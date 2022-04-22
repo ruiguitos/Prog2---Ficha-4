@@ -79,7 +79,7 @@ public abstract class Pessoa extends Identificador {
         escreverSumario(aula);
     }
 
-    protected  void escreverSumario(Aula aula) {
+    protected void escreverSumario(Aula aula) {
     }
 
     protected void assinarSumario(Aula aula) {
